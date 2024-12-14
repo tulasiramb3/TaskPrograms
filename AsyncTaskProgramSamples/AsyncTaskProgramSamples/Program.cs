@@ -9,6 +9,7 @@ using (HttpClient client = new HttpClient())
         string response = await client.GetStringAsync(url);
         Console.WriteLine("Response from GetStringAsync:{0}", response);
         //If you need the full HTTP response meta data including headers, status code then GetAsync is useful.
+        //test
         HttpResponseMessage httpResponse = await client.GetAsync(url);
         Console.WriteLine("Response from GetAsync:{0}", httpResponse);
         string content = await httpResponse.Content.ReadAsStringAsync();
